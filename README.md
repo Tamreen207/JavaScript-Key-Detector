@@ -30,4 +30,4 @@ It detects and displays the **key pressed by the user** along with its key code 
 ---
 
 ## 🎥 Demo Video
-[Watch Demo Video]()
+[Watch Demo Video](https://github.com/Tamreen207/JavaScript-Key-Detector/blob/main/Screencast%20from%2025-01-26%2003%3A34%3A40%20PM%20IST.webm)
