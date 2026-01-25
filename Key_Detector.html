@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Event KeyCodes</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+   <style>
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+}
+
+.color {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+table {
+  width: 450px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 22px;
+}
+
+th {
+  background: #1d2671;
+  color: white;
+  padding: 18px;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 500;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 500px) {
+  table {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+</style>
+  </head>
+  <body>
+    <div class="project">
+      <div id="insert">
+        <div class="key"><h1>Press the key and watch magic</h1></div>
+      </div>
+    </div>
+
+    <script>
+    const insert = document.getElementById("insert")
+    window.addEventListener("keydown",(e)=>{
+        insert.innerHTML = `
+        <div class="color">
+        <table>
+          <tr>
+            <th>key</th>
+            <th>keyCode</th>
+            <th>code</th>
+</tr>
+<tr>
+    <td>${e.key}</td>
+    <td>${e.which}</td>
+    <td>${e.code}</td>
+    </tr>
+
+            </table>
+        </div>`;
+    })
+    </script>
+  </body>
+</html>
